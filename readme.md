@@ -41,3 +41,9 @@ export class Role {
     id: number;
 }
 ```
+
+
+## todo:
+
+* modify maven/gradle build process to inject a custom task exporting generated libraries to repo
+* repair the `J2SLibPublisher`. it does not publish libraries to the repo. throws an 400 bad request error. try to `npm login`
