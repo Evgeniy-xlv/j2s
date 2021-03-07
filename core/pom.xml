@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>j2s-core</artifactId>
+    <version>0.0.1</version>
+
+    <parent>
+        <groupId>org.j2s</groupId>
+        <artifactId>j2s</artifactId>
+        <version>0.0.1</version>
+    </parent>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.j2s</groupId>
+                <artifactId>j2s-maven-plugin</artifactId>
+                <version>0.0.1</version>
+                <executions>
+                    <execution>
+<!--                        <configuration>-->
+<!--                            <sourceXmlFilePath>${project.basedir}/src/main/resources/data.xml</sourceXmlFilePath>-->
+<!--                            <destinationJsonFilePath>${project.basedir}/src/main/resources/data.json</destinationJsonFilePath>-->
+<!--                        </configuration>-->
+                        <goals>
+                            <goal>j2s-mojo</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>
