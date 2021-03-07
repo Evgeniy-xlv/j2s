@@ -9,6 +9,7 @@ public class J2SLibPublisher {
         // src
         String libPath = "build\\j2s\\" + libraryName;
         File dir = new File(libPath);
+        dir.delete();
         dir.mkdirs();
         for (J2SCompilationResult compilationResult : compilationResults) {
             File file = new File(libPath + "\\src", compilationResult.getFile().getName());
