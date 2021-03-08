@@ -43,7 +43,42 @@ export class Role {
 ```
 
 
+## Usage:
+
+Customize `pom.xml` of your project with the following part:
+```xml
+    <dependencies>
+        <dependency>
+            <groupId>org.j2s</groupId>
+            <artifactId>j2s-core</artifactId>
+            <version>0.0.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.j2s</groupId>
+            <artifactId>j2s-maven-plugin</artifactId>
+            <version>0.0.1</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.j2s</groupId>
+                <artifactId>j2s-maven-plugin</artifactId>
+                <version>0.0.1</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>j2s-mojo</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+```
+
 ## todo:
 
-* modify maven/gradle build process to inject a custom task exporting generated libraries to repo
 * repair the `J2SLibPublisher`. it does not publish libraries to the repo. throws an 400 bad request error. try to `npm login`
+* junit
